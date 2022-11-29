@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
       setCartItems(
         cartItems.map((productInCart) => {
           if (productInCart.id === product.id) {
-            return { ...inCart, amount: inCart.amount + 1 };
+            return { ...inCart, amount: inCart.amount };
           } else return productInCart;
         })
       );
@@ -64,7 +64,7 @@ export const CartProvider = ({ children }) => {
       setCartItems(
         cartItems.map((productInCart) => {
           if (productInCart.id === productId) {
-            return { ...inCart, amount: inCart.amount - 1 };
+            return { ...inCart, amount: inCart.amount };
           } else return productInCart;
         })
       );
